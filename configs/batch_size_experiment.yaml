@@ -1,0 +1,48 @@
+seed: 0
+data_root_dir: data/latent_reps
+dataset: zzz
+experiment_var:
+  batch_size: [25, 50, 100, 200]
+validation_size: 1000
+test_size: 5000
+k_folds: 5
+save_dir: batch_size_experiment
+q_palette: ["#3E96A1", "#EC4E20", "#9F45B0", "#234D20"]
+c_palette: ["#3E96A1", "#EC4E20", "#9F45B0", "#234D20"]
+
+data:
+  root_dir: data/latent_reps
+  scale: True
+  latent_rep: 4
+  transform: !!python/object:utils.Permute
+    permutation: [0,1,2,3,4,5,6,7]
+
+
+classical:
+  input_size: 8
+  latent_size: 2
+  batch_size: 25
+  train_size: 1000
+  epochs: 100
+  optimiser: adam
+  loss: mse
+  lr: 0.01
+  eval_interval: 10
+  disable_bar: True
+  
+quantum:
+  ansatz: original_ansatz
+  input_size: 4
+  latent_size: 2
+  layers: 1
+  embedding: particle_embedding
+  batch_size: 1
+  train_size: 1000
+  epochs: 50
+  loss: fidelity_loss
+  optimiser: QNGOptimizer
+  lr: 0.005
+  weight_init_range: [0,1]
+  weight_init_dist: uniform
+  eval_interval: 10
+  disable_bar: True
