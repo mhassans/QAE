@@ -38,8 +38,8 @@ from subprocess import Popen
 
 jax_config.update("jax_enable_x64", True)
 
-plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
-plt.rcParams["figure.dpi"] = 150
+#plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
+#plt.rcParams["figure.dpi"] = 150
 
 
 def setup_experiment_results_dir(dataset, experiment):

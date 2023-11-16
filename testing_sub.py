@@ -27,8 +27,8 @@ import pennylane as qml
 import matplotlib.pyplot as plt
 
 np.random.seed(0)
-plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
-plt.rcParams["figure.dpi"] = 150
+#plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
+#plt.rcParams["figure.dpi"] = 150
 
 # input6 latent size 3
 

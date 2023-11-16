@@ -33,8 +33,8 @@ import seaborn as sns
 import pandas as pd
 from optax import cosine_similarity
 
-plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
-plt.rcParams["figure.dpi"] = 150
+#plt.rcParams.update({"text.usetex": True, "font.family": "Lucida Grande"})
+#plt.rcParams["figure.dpi"] = 150
 
 
 class Tester(ABC):
