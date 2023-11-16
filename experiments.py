@@ -642,7 +642,7 @@ class Experiment:
                     "qsub",
                     "-v",
                     f"ARGS1={self.experiment_dir},ARGS2={job+1}",
-                    "run_distributed_experiment.sh",
+                    "run_distributed_training.sh",
                 ],
             )
 
